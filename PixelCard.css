@@ -261,8 +261,8 @@
     }
 
     .pixel-card {
-        padding: 2rem 1.5rem;
-        height: 200px; /* Fixed height for consistent card sizes */
+        padding: 1.5rem 1rem;
+        height: 160px; /* Reduced height for more compact cards */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -270,13 +270,13 @@
     }
 
     .pixel-card-title {
-        font-size: 1.5rem; /* Larger for better readability */
-        margin-bottom: 0.8rem;
+        font-size: 1.3rem; /* Reduced for compact cards */
+        margin-bottom: 0.5rem;
     }
 
     .pixel-card-subtitle {
-        font-size: 1rem; /* Larger for better readability */
-        margin-bottom: 1rem;
+        font-size: 0.9rem; /* Reduced for compact cards */
+        margin-bottom: 0.8rem;
     }
 
     .pixel-card-modal-content {
@@ -328,8 +328,8 @@
     }
 
     .pixel-card {
-        padding: 1.5rem 1rem;
-        height: 180px; /* Fixed height for consistent card sizes */
+        padding: 1rem 0.8rem;
+        height: 140px; /* Reduced height for more compact cards */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -337,11 +337,13 @@
     }
 
     .pixel-card-title {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
     }
 
     .pixel-card-subtitle {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        margin-bottom: 0.6rem;
     }
 
     .pixel-card-modal-content {
