@@ -1,0 +1,393 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', monospace;
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ===== 1. HEADING SECTION ===== */
+.header {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0 1rem 0;
+}
+
+/* Base heading styles - interactive styles are in variable-proximity.css */
+.header h1 {
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 3.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    font-variation-settings: 'wght' 300, 'opsz' 14;
+    transition: font-variation-settings 0.1s ease;
+    cursor: default;
+}
+
+/* ===== 2. FESTIVAL DESCRIPTION ===== */
+.festival-description {
+    text-align: left;
+    max-width: 75ch; /* Limit width for readability */
+    margin: 0 auto 3rem auto;
+    padding: 2rem;
+    color: rgba(220, 220, 255, 0.9);
+    background: rgba(10, 25, 47, 0.3);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+}
+
+.festival-description p {
+    color: rgba(220, 220, 255, 0.85);
+    line-height: 1.7;
+    font-size: 1.25rem;
+    font-family: 'Electrolize', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.1);
+}
+
+/* Remove the old ::first-letter effect */
+.festival-description p::first-letter {
+   all: unset;
+}
+
+/* ===== 4. BOOK ACCOMMODATION BUTTON ===== */
+.book-accommodation-section {
+    margin: 2rem 0;
+    position: relative;
+    text-align: center;
+}
+
+.book-accommodation-section::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 400px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+.book-accommodation-btn {
+    font-family: 'Orbitron', sans-serif !important;
+    background: linear-gradient(45deg, #00A8FF, #00FFD2) !important;
+    color: #0a192f !important;
+    padding: 15px 30px !important;
+    border: none !important;
+    border-radius: 50px !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 0 20px rgba(0, 220, 255, 0.5) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.book-accommodation-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(0, 220, 255, 0.8) !important;
+}
+
+.book-accommodation-btn:focus {
+    outline: none !important;
+}
+
+/* ===== 5. COUNTDOWN TIMER (Cyberpunk Glassmorphism) ===== */
+.countdown-section {
+    margin: 4rem 0 !important;
+    padding: 3rem !important;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 255, 255, 0.05) 50%, rgba(0, 0, 0, 0.3) 100%) !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(0, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+}
+
+.countdown-section::before {
+    content: "Event Countdown";
+    display: block;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(0, 255, 255, 0.9) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.countdown-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 255, 255, 0.1) 100%);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+.countdown-value {
+    font-family: 'Orbitron', monospace;
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(0, 255, 255, 0.9);
+    text-shadow: 0 0 22px rgba(0, 255, 255, 0.7);
+    line-height: 1;
+}
+
+/* Specific colors for countdown units */
+#days {
+    color: rgba(0, 255, 255, 1); /* Full intensity */
+    text-shadow: 0 0 22px rgba(0, 255, 255, 0.7);
+}
+
+#hours {
+    color: rgba(0, 255, 255, 0.85); /* Slightly less intensity */
+    text-shadow: 0 0 18px rgba(0, 255, 255, 0.5);
+}
+
+#minutes {
+    color: rgba(0, 255, 255, 0.7); /* Medium intensity */
+    text-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+}
+
+#seconds {
+    color: rgba(0, 255, 255, 0.55); /* Lowest intensity */
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+.countdown-label {
+    font-family: 'Electrolize', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    margin-top: 0.75rem;
+    z-index: 999;
+    pointer-events: none;
+}
+
+/* ===== MAP CONTAINER STYLES ===== */
+.map-container {
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+.location-details {
+    margin-top: 1.5rem;
+}
+
+.location-details h3 {
+    color: #00ffff;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.location-details p {
+    color: rgba(220, 220, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+    font-family: 'Electrolize', sans-serif;
+}
+
+.open-maps-btn {
+    background: linear-gradient(45deg, #00A8FF, #00FFD2);
+    color: #0a192f;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 220, 255, 0.4);
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.open-maps-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 220, 255, 0.6);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem 0;
+    }
+    
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .festival-description {
+        margin: 0 auto 2rem auto;
+    }
+    
+    .festival-description p {
+        font-size: 1rem;
+    }
+    
+    .book-accommodation-section {
+        margin: 1.5rem 0;
+    }
+    
+    .book-accommodation-btn {
+        padding: 12px 25px !important;
+        font-size: 1rem !important;
+    }
+    
+    .book-accommodation-section::before {
+        bottom: -10px;
+    }
+    
+    .countdown-section {
+        padding: 2rem 1rem !important;
+        margin: 3rem 0 !important;
+    }
+
+    .countdown-container {
+        gap: 1rem;
+    }
+    
+    .countdown-unit {
+        min-width: 100px;
+        padding: 0.8rem 1rem;
+    }
+
+    .countdown-value {
+        font-size: 3rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.8rem;
+    }
+
+    .map-container iframe {
+        height: 350px;
+    }
+    
+    .open-maps-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        margin-bottom: 0.3rem;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    .festival-description {
+        display: none;
+    }
+    
+    .festival-description p {
+        font-size: 0.9rem;
+    }
+        
+    .book-accommodation-btn {
+        padding: 10px 20px !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .countdown-container {
+        gap: 0.5rem;
+    }
+    
+    .countdown-unit {
+       flex-basis: calc(50% - 1rem);
+       padding: 0.6rem;
+       min-width: initial;
+    }
+    
+    .countdown-value {
+        font-size: 2.2rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+    }
+
+    .map-container iframe {
+        height: 280px;
+    }
+}

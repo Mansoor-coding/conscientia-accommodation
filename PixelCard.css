@@ -1,0 +1,242 @@
+/* ===== PIXEL CARD STYLES ===== */
+.pixel-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 2rem 0;
+    padding: 0 1rem;
+    align-items: center;
+}
+
+.pixel-card {
+    background: rgba(10, 25, 47, 0.85);
+    border: 3px solid rgba(0, 255, 255, 0.5);
+    padding: 2rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    box-shadow: 
+        0 0 5px rgba(0, 255, 255, 0.2),
+        inset 0 0 8px rgba(255, 0, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Spotlight Custom Properties */
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+    --spotlight-color: rgba(0, 229, 255, 0.2);
+}
+
+.pixel-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 40%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.pixel-card:hover::before {
+    opacity: 0.8;
+}
+
+.pixel-card:hover {
+    border-color: rgba(0, 255, 255, 0.8);
+    box-shadow: 
+        0 0 15px rgba(0, 255, 255, 0.3),
+        inset 0 0 10px rgba(255, 0, 255, 0.15);
+}
+
+.pixel-card-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    color: #00ffff;
+    margin-bottom: 0.5rem;
+}
+
+.pixel-card-subtitle {
+    font-family: 'Electrolize', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+}
+
+.pixel-card-content {
+    display: none;
+    overflow-y: auto;
+    height: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 255, 255, 0.5) transparent;
+}
+
+/* Expanded Card Modal */
+.pixel-card-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.pixel-card-modal-overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.pixel-card-modal-content {
+    background: rgba(0, 0, 0, 0.95);
+    border: 3px solid rgba(0, 255, 255, 0.7);
+    box-shadow: 
+        10px 10px 0px rgba(0, 255, 255, 0.7),
+        -10px -10px 0px rgba(255, 0, 255, 0.5);
+    width: 80vw;
+    max-width: 700px;
+    height: auto;
+    max-height: 85vh;
+    padding: 2.5rem;
+    position: relative;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 255, 255, 0.5) transparent;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pixel-card-modal-content h2 {
+    font-size: 2.5rem;
+    color: #00ffff;
+    margin-bottom: 1rem;
+}
+
+.pixel-card-modal-content p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 60ch; /* Limit line length for readability */
+}
+
+.pixel-card-modal-content .map-container {
+    width: 100%;
+    height: 40vh; /* Adjust height as needed */
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 255, 255, 0.3);
+}
+
+.pixel-card-modal-content .map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.pixel-card-modal-content .location-details {
+    margin-top: 1.5rem;
+}
+
+.pixel-card-modal-content .open-maps-btn {
+    background: rgba(0, 255, 255, 0.1);
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    color: #00ffff;
+    padding: 0.8rem 1.5rem;
+    font-family: 'Electrolize', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 1rem;
+}
+
+.pixel-card-modal-content .open-maps-btn:hover {
+    background: rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.pixel-card-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: rgba(0, 255, 255, 0.7);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.pixel-card-modal-close:hover {
+    color: #00ffff;
+    transform: rotate(90deg);
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+
+/* Bigger screens (e.g., Desktops) */
+@media (min-width: 1024px) {
+    .pixel-card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .pixel-card {
+        min-height: 350px;
+    }
+}
+
+/* Medium screens (e.g., Tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .pixel-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Smaller screens (e.g., Mobile) */
+@media (max-width: 767px) {
+    .pixel-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .pixel-card {
+        padding: 1.5rem;
+    }
+
+    .pixel-card-title {
+        font-size: 1.2rem;
+    }
+
+    .pixel-card-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .pixel-card-modal-content {
+        width: 90vw;
+        height: 85vh;
+        padding: 2rem;
+    }
+
+    .pixel-card-modal-close {
+        top: 15px;
+        right: 15px;
+    }
+} 
