@@ -229,7 +229,11 @@
         grid-template-columns: repeat(4, 1fr);
     }
     .pixel-card {
-        min-height: 350px;
+        height: 350px; /* Fixed height for consistent card sizes */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -237,6 +241,13 @@
 @media (min-width: 768px) and (max-width: 1023px) {
     .pixel-card-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .pixel-card {
+        height: 280px; /* Fixed height for consistent card sizes */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -251,7 +262,11 @@
 
     .pixel-card {
         padding: 2rem 1.5rem;
-        min-height: 200px; /* Ensure minimum height for better touch targets */
+        height: 200px; /* Fixed height for consistent card sizes */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .pixel-card-title {
@@ -314,7 +329,11 @@
 
     .pixel-card {
         padding: 1.5rem 1rem;
-        min-height: 180px;
+        height: 180px; /* Fixed height for consistent card sizes */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .pixel-card-title {
