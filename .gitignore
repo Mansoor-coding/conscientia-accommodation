@@ -1,0 +1,33 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+
+# Node modules (if you add any in future)
+node_modules/
+
+# Build files
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+
+# Cache directories
+.cache/
+.parcel-cache/
+
+# OS generated files
+Icon?
+ehthumbs.db
