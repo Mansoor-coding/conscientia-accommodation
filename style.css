@@ -297,6 +297,8 @@ button {
     .header h1 {
         font-size: 2.8rem; /* Slightly larger for better mobile readability */
         line-height: 1.2;
+        letter-spacing: 0.15em; /* Slightly reduced letter spacing for tablets */
+        word-wrap: break-word; /* Prevent text overflow */
     }
     
     .festival-description {
@@ -386,6 +388,8 @@ button {
         font-size: 2.2rem; /* Better than 2rem for readability */
         margin-bottom: 0.3rem;
         line-height: 1.1;
+        letter-spacing: 0.1em; /* Reduced letter spacing for small screens */
+        word-wrap: break-word; /* Prevent text overflow */
     }
     
     .festival-description {
