@@ -1,10 +1,10 @@
 /* ===== PIXEL CARD STYLES ===== */
 .pixel-card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 2rem 0;
     padding: 0 1rem;
     align-items: center;
@@ -151,12 +151,12 @@
     box-shadow: 
         10px 10px 0px rgba(0, 255, 255, 0.7),
         -10px -10px 0px rgba(255, 0, 255, 0.5);
-    width: 80vw;
-    max-width: 700px;
+    width: 75vw; /* Reduced from 80vw */
+    max-width: 600px; /* Reduced from 700px */
     height: auto;
-    max-height: 95vh; /* was 85vh */
-    min-height: 60vh;
-    padding: 2.5rem;
+    max-height: 85vh; /* Reduced from 95vh */
+    min-height: 50vh; /* Reduced from 60vh */
+    padding: 2rem; /* Reduced from 2.5rem */
     position: relative;
     overflow-y: auto;
     scrollbar-width: thin;
@@ -344,14 +344,14 @@
 @media (max-width: 767px) {
     .pixel-card-grid {
         grid-template-columns: 1fr; /* Single column for better mobile experience */
-        gap: 1.5rem;
-        padding: 0 1rem;
-        margin: 1.5rem 0;
+        gap: 1rem; /* Reduced gap */
+        padding: 0 0.5rem; /* Reduced padding */
+        margin: 1rem 0; /* Reduced margin */
     }
 
     .pixel-card {
-        padding: 1.5rem 1rem;
-        height: 160px; /* Reduced height for more compact cards */
+        padding: 1.2rem 0.8rem; /* Reduced padding */
+        height: 140px; /* Further reduced height for more compact cards */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -369,11 +369,12 @@
     }
 
     .pixel-card-modal-content {
-        width: 95vw; /* Use more screen real estate */
-        max-height: 98vh;
-        min-height: 60vh;
+        width: 90vw; /* Reduced from 95vw for better margins */
+        max-width: 500px; /* Reduced max-width for mobile */
+        max-height: 85vh; /* Reduced from 98vh */
+        min-height: 50vh; /* Reduced minimum height */
         overflow-y: auto;
-        padding: 1.5rem;
+        padding: 1.2rem; /* Reduced padding */
         margin: 1rem;
     }
 
@@ -415,13 +416,14 @@
 @media (max-width: 480px) {
     /* Extra responsive map for small mobile screens */
     .pixel-card-grid {
-        gap: 0.5rem; /* Reduced gap */
-        padding: 0 0.25rem; /* Reduced padding */
+        gap: 0.8rem; /* Slightly increased gap for better separation */
+        padding: 0 0.5rem; /* Better padding */
+        margin: 0.8rem 0; /* Reduced margin */
     }
 
     .pixel-card {
-        padding: 0.8rem 0.6rem; /* Reduced padding */
-        height: 120px; /* Further reduced height for more compact cards */
+        padding: 1rem 0.8rem; /* Better padding */
+        height: 110px; /* More compact height */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -429,48 +431,114 @@
     }
 
     .pixel-card-title {
-        font-size: 1rem; /* Reduced from 1.1rem */
-        margin-bottom: 0.3rem; /* Reduced margin */
+        font-size: 1.1rem; /* Slightly larger for readability */
+        margin-bottom: 0.4rem; /* Better spacing */
     }
 
     .pixel-card-subtitle {
-        font-size: 0.75rem; /* Reduced from 0.8rem */
-        margin-bottom: 0.4rem; /* Reduced margin */
+        font-size: 0.8rem; /* Better readability */
+        margin-bottom: 0.5rem; /* Better spacing */
     }
 
     .pixel-card-modal-content {
-        width: 96vw; /* Slightly reduced from 98vw */
-        padding: 0.8rem; /* Reduced padding */
-        margin: 0.5rem;
+        width: 88vw; /* Reduced from 96vw for better margins */
+        max-width: 450px; /* Smaller max-width */
+        max-height: 80vh; /* Reduced height */
+        padding: 1rem; /* Better padding */
+        margin: 1rem;
     }
 
     .pixel-card-modal-content h2 {
-        font-size: 1.5rem; /* Reduced from 1.8rem */
+        font-size: 1.6rem; /* Better mobile size */
+        margin-bottom: 0.8rem; /* Better spacing */
     }
 
     .pixel-card-modal-content p {
-        font-size: 0.85rem; /* Reduced from 0.95rem */
-        line-height: 1.3; /* Tighter line height */
+        font-size: 0.9rem; /* Better readability */
+        line-height: 1.4; /* Better line height */
+        margin-bottom: 0.8rem; /* Better spacing */
     }
 
     .pixel-card-modal-close {
-        top: 6px; /* Reduced from 8px */
-        right: 6px; /* Reduced from 8px */
-        width: 32px; /* Reduced from 36px */
-        height: 32px; /* Reduced from 36px */
-        font-size: 1.2rem; /* Reduced from 1.4rem */
+        top: 8px; /* Better positioning */
+        right: 8px; /* Better positioning */
+        width: 35px; /* Better touch target */
+        height: 35px; /* Better touch target */
+        font-size: 1.3rem; /* Better visibility */
         border-width: 2px;
     }
 
     .pixel-card-modal-content .map-container {
-        height: 200px; /* Reduced from 250px */
-        margin: 0.5rem 0; /* Reduced margin */
+        height: 220px; /* Better mobile height */
+        margin: 0.8rem 0; /* Better margin */
     }
 
     .pixel-card-modal-content .open-maps-btn {
-        padding: 0.6rem 1rem; /* Reduced padding */
-        font-size: 0.8rem; /* Reduced from 0.9rem */
-        min-height: 40px; /* Reduced from 44px */
+        padding: 0.8rem 1.2rem; /* Better padding */
+        font-size: 0.9rem; /* Better size */
+        min-height: 44px; /* Better touch target */
+    }
+}
+
+/* Extra small mobile screens */
+@media (max-width: 360px) {
+    .pixel-card-grid {
+        gap: 0.6rem;
+        padding: 0 0.4rem;
+        margin: 0.6rem 0;
+    }
+
+    .pixel-card {
+        padding: 0.8rem 0.6rem;
+        height: 100px; /* Very compact for small screens */
+    }
+
+    .pixel-card-title {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .pixel-card-subtitle {
+        font-size: 0.75rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .pixel-card-modal-content {
+        width: 85vw; /* Even smaller for tiny screens */
+        max-width: 380px;
+        max-height: 75vh;
+        padding: 0.8rem;
+        margin: 0.8rem;
+    }
+
+    .pixel-card-modal-content h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .pixel-card-modal-content p {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        margin-bottom: 0.6rem;
+    }
+
+    .pixel-card-modal-close {
+        top: 6px;
+        right: 6px;
+        width: 32px;
+        height: 32px;
+        font-size: 1.1rem;
+    }
+
+    .pixel-card-modal-content .map-container {
+        height: 180px;
+        margin: 0.6rem 0;
+    }
+
+    .pixel-card-modal-content .open-maps-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+        min-height: 40px;
     }
 }
 

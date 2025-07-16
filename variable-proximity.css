@@ -1,4 +1,4 @@
-/* Variable Proximity CSS - Advanced Letter-by-Letter Effect */
+/* Variable Proximity CSS - Enhanced Letter-by-Letter Effect */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
 
 .variable-proximity {
@@ -6,19 +6,8 @@
     font-variation-settings: 'wght' 300, 'opsz' 14;
     font-feature-settings: normal;
     cursor: default;
+    line-height: 1.2;
     /* Remove transition from parent - letters will handle their own transitions */
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
 }
 
 /* Ensure proper letter spacing and rendering */
@@ -27,6 +16,37 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: font-variation-settings 0.1s ease-out;
+}
+
+/* Enhanced variable proximity for headings */
+.header h1.variable-proximity,
+.booking-header h1.variable-proximity {
+    font-family: "Roboto Flex", sans-serif;
+    font-variation-settings: 'wght' 300, 'opsz' 14;
+    cursor: default;
+    user-select: none;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .variable-proximity span {
+        transition: font-variation-settings 0.15s ease-out;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .variable-proximity span {
+        transition: font-variation-settings 0.2s ease-out;
+    }
+}
+
+/* Accessibility - respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .variable-proximity span {
+        transition: none;
+    }
 }
 
 .sr-only {
@@ -39,15 +59,6 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
-}
-
-/* Enhanced variable proximity for headings */
-.header h1.variable-proximity,
-.booking-header h1.variable-proximity {
-    font-family: "Roboto Flex", sans-serif;
-    font-variation-settings: 'wght' 300, 'opsz' 14;
-    transition: font-variation-settings 0.1s ease;
-    cursor: default;
 }
 
 /* Individual letter styling */
