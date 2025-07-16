@@ -78,6 +78,28 @@
     }
 }
 
+/* --- TAP FEEDBACK & ACCESSIBILITY FOR MOBILE & KEYBOARD --- */
+.pixel-card:active {
+    transform: scale(0.97);
+    border-color: #00fff7;
+    box-shadow: 0 0 18px #00fff7, 0 0 8px #00ffd2;
+}
+.pixel-card:focus {
+    outline: 3px solid #00fff7;
+    outline-offset: 2px;
+    z-index: 2;
+}
+.pixel-card {
+    touch-action: manipulation;
+}
+
+@media (max-width: 768px) {
+    .pixel-card {
+        /* Ensure tap feedback is visible on mobile */
+        transition: transform 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
+    }
+}
+
 .pixel-card-title {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.8rem;

@@ -767,3 +767,64 @@ button {
         font-size: 0.75rem; /* Further reduced */
     }
 }
+
+/* ===== STICKY BOOK NOW BUTTON FOR MOBILE ===== */
+.sticky-book-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: none; /* Hidden by default, shown on mobile */
+    background: linear-gradient(45deg, #00A8FF, #00FFD2) !important;
+    color: #0a192f !important;
+    padding: 18px 36px !important;
+    border: none !important;
+    border-radius: 50px !important;
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    transition: all 0.3s cubic-bezier(0.4,0,0.2,1) !important;
+    box-shadow: 0 8px 25px rgba(0, 220, 255, 0.4), 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(10px);
+    animation: pulse-glow 2s infinite;
+    outline: none;
+}
+.sticky-book-btn:active {
+    transform: translateX(-50%) scale(0.97);
+    box-shadow: 0 4px 12px rgba(0, 220, 255, 0.3);
+}
+.sticky-book-btn:focus {
+    outline: 2px solid #00fff7;
+    outline-offset: 2px;
+}
+.sticky-book-btn:hover {
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 220, 255, 0.6), 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+}
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 8px 25px rgba(0, 220, 255, 0.4), 0 4px 15px rgba(0, 0, 0, 0.3); }
+    50% { box-shadow: 0 12px 35px rgba(0, 220, 255, 0.7), 0 6px 20px rgba(0, 0, 0, 0.4); }
+}
+@media (max-width: 768px) {
+    .sticky-book-btn {
+        display: block;
+        min-width: 70vw;
+        min-height: 54px;
+        font-size: 1.1rem !important;
+    }
+    .book-accommodation-section {
+        margin-bottom: 90px; /* Add space for sticky button */
+    }
+}
+@media (max-width: 480px) {
+    .sticky-book-btn {
+        padding: 14px 18px !important;
+        font-size: 0.95rem !important;
+        bottom: 12px;
+        min-width: 90vw;
+    }
+}
