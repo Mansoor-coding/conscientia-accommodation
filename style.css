@@ -497,12 +497,13 @@ button {
     }
 
     .header {
-        padding: 0.5rem 0; /* Reduced padding */
+        padding: 3.5rem 0 0.5rem 0; /* Even further increased top padding to move heading down more */
         margin-bottom: 0.5rem; /* Reduced margin */
     }
     
     .header h1 {
-        font-size: 2.2rem; /* Reduced from 2.8rem */
+        font-size: 2.3rem; /* Reduced from 2.6rem */
+        font-weight: 700; /* Added bold weight */
         line-height: 1.1; /* Tighter line height */
         letter-spacing: 0.1em; /* Reduced letter spacing */
         word-wrap: break-word;
@@ -519,7 +520,7 @@ button {
     }
     
     .book-accommodation-section {
-        margin: 1.5rem 0; /* Reduced margin */
+        margin: 3.5rem 0 1.5rem 0; /* Further increased top margin for more spacing */
         padding: 0 0.5rem; /* Reduced padding */
     }
     
@@ -609,11 +610,12 @@ button {
 
     .header {
         margin-bottom: 0.25rem; /* Minimal margin */
-        padding: 0.25rem 0; /* Minimal padding */
+        padding: 2.5rem 0 0.25rem 0; /* Even further increased top padding to move heading down more */
     }
     
     .header h1 {
-        font-size: 1.8rem; /* Significantly reduced from 2.2rem */
+        font-size: 1.9rem; /* Reduced from 2.1rem */
+        font-weight: 700; /* Added bold weight */
         margin-bottom: 0.2rem; /* Minimal margin */
         line-height: 1;
         letter-spacing: 0.05em; /* Minimal letter spacing */
@@ -662,7 +664,7 @@ button {
 
     /* Better small screen spacing */
     .book-accommodation-section {
-        margin: 1rem 0; /* Reduced margin */
+        margin: 3rem 0 1rem 0; /* Further increased top margin for small screens */
         padding: 0 0.25rem; /* Minimal padding */
     }
 
