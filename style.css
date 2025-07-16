@@ -492,62 +492,62 @@ button {
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .container {
-        padding: 1rem 1rem 2rem 1rem;
-        margin: 0 0.5rem;
+        padding: 0.5rem 0.5rem 1.5rem 0.5rem; /* Reduced padding */
+        margin: 0 0.25rem; /* Reduced margin */
     }
 
     .header {
-        padding: 1rem 0;
-        margin-bottom: 1rem;
+        padding: 0.5rem 0; /* Reduced padding */
+        margin-bottom: 0.5rem; /* Reduced margin */
     }
     
     .header h1 {
-        font-size: 2.8rem; /* Slightly larger for better mobile readability */
-        line-height: 1.2;
-        letter-spacing: 0.15em; /* Slightly reduced letter spacing for tablets */
-        word-wrap: break-word; /* Prevent text overflow */
+        font-size: 2.2rem; /* Reduced from 2.8rem */
+        line-height: 1.1; /* Tighter line height */
+        letter-spacing: 0.1em; /* Reduced letter spacing */
+        word-wrap: break-word;
     }
     
     .festival-description {
-        margin: 0 auto 2rem auto;
-        padding: 0 1rem;
+        margin: 0 auto 1.5rem auto; /* Reduced margin */
+        padding: 0 0.5rem; /* Reduced padding */
     }
     
     .festival-description p {
-        font-size: 1.1rem; /* Better mobile font size */
-        line-height: 1.5;
+        font-size: 1rem; /* Reduced from 1.1rem */
+        line-height: 1.4; /* Tighter line height */
     }
     
     .book-accommodation-section {
-        margin: 2rem 0;
-        padding: 0 1rem;
+        margin: 1.5rem 0; /* Reduced margin */
+        padding: 0 0.5rem; /* Reduced padding */
     }
     
     .book-accommodation-btn {
-        padding: 15px 30px !important; /* Better touch target */
-        font-size: 1.1rem !important;
-        min-height: 48px;
+        padding: 12px 24px !important; /* Reduced padding */
+        font-size: 1rem !important; /* Reduced font size */
+        min-height: 44px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     
     .book-accommodation-section::before {
-        bottom: -10px;
+        bottom: -8px; /* Reduced */
     }
     
     .countdown-section {
-        padding: 2rem 1rem !important;
-        margin: 2rem 0 !important;
+        padding: 1.5rem 0.5rem !important; /* Reduced padding */
+        margin: 1.5rem 0 !important; /* Reduced margin */
     }
 
     .countdown-container {
-        gap: 1.5rem; /* Better spacing */
+        gap: 1rem; /* Reduced gap */
     }
     
     .countdown-unit {
-        min-width: 120px; /* Better mobile sizing */
-        padding: 1rem 1.2rem;
+        min-width: 100px; /* Reduced from 120px */
+        padding: 0.8rem 1rem; /* Reduced padding */
     }
 
     .countdown-value {
@@ -603,21 +603,21 @@ button {
 
 @media (max-width: 480px) {
     .container {
-        padding: 0.5rem 0.5rem 1.5rem 0.5rem;
-        margin: 0 0.25rem;
+        padding: 0.25rem 0.25rem 1rem 0.25rem; /* Minimal padding */
+        margin: 0 0.1rem; /* Minimal margin */
     }
 
     .header {
-        margin-bottom: 0.5rem;
-        padding: 0.5rem 0;
+        margin-bottom: 0.25rem; /* Minimal margin */
+        padding: 0.25rem 0; /* Minimal padding */
     }
     
     .header h1 {
-        font-size: 2.2rem; /* Better than 2rem for readability */
-        margin-bottom: 0.3rem;
-        line-height: 1.1;
-        letter-spacing: 0.1em; /* Reduced letter spacing for small screens */
-        word-wrap: break-word; /* Prevent text overflow */
+        font-size: 1.8rem; /* Significantly reduced from 2.2rem */
+        margin-bottom: 0.2rem; /* Minimal margin */
+        line-height: 1;
+        letter-spacing: 0.05em; /* Minimal letter spacing */
+        word-wrap: break-word;
     }
     
     .festival-description {
@@ -625,116 +625,145 @@ button {
     }
     
     .festival-description p {
-        font-size: 0.9rem;
+        font-size: 0.8rem; /* Reduced from 0.9rem */
     }
         
     .book-accommodation-btn {
-        padding: 12px 24px !important; /* Better touch target */
-        font-size: 1rem !important;
-        min-height: 44px;
-        width: 100%; /* Full width for better mobile UX */
-        max-width: 300px;
+        padding: 10px 20px !important; /* Reduced padding */
+        font-size: 0.9rem !important; /* Reduced font size */
+        min-height: 40px; /* Reduced height */
+        width: 100%;
+        max-width: 250px; /* Reduced max width */
         margin: 0 auto;
     }
     
     .countdown-container {
-        gap: 0.8rem; /* Better than 0.5rem */
+        gap: 0.5rem; /* Minimal gap */
     }
     
     .countdown-unit {
-       flex-basis: calc(50% - 0.8rem);
-       padding: 0.8rem 0.6rem;
+       flex-basis: calc(50% - 0.5rem);
+       padding: 0.5rem 0.4rem; /* Reduced padding */
        min-width: initial;
     }
     
     .countdown-value {
-        font-size: 3.5rem; /* Increased from 2.5rem for very small screens */
+        font-size: 2.5rem; /* Reduced from 3.5rem */
     }
     
     .countdown-label {
-        font-size: 0.8rem; /* Better than 0.7rem */
-        letter-spacing: 0.1em;
+        font-size: 0.7rem; /* Reduced from 0.8rem */
+        letter-spacing: 0.05em; /* Minimal letter spacing */
     }
 
     .map-container iframe {
-        height: 280px;
+        height: 200px; /* Reduced from 280px */
     }
 
     /* Better small screen spacing */
     .book-accommodation-section {
-        margin: 1.5rem 0;
-        padding: 0 0.5rem;
+        margin: 1rem 0; /* Reduced margin */
+        padding: 0 0.25rem; /* Minimal padding */
     }
 
     .countdown-section {
-        padding: 1.5rem 0.5rem !important;
-        margin: 1.5rem 0 !important;
+        padding: 1rem 0.25rem !important; /* Reduced padding */
+        margin: 1rem 0 !important; /* Reduced margin */
     }
 }
 
 /* Enhanced mobile responsiveness for FAQ */
 @media (max-width: 480px) {
     .faq-section {
-        margin: 1.5rem 0 0.5rem 0;
-        padding: 1.5rem 0.8rem;
-        border-radius: 15px;
+        margin: 1rem 0 0.25rem 0; /* Reduced margins */
+        padding: 1rem 0.5rem; /* Reduced padding */
+        border-radius: 12px; /* Slightly smaller radius */
     }
     
     .faq-title {
-        font-size: 1.8rem;
-        line-height: 1.2;
+        font-size: 1.5rem; /* Reduced from 1.8rem */
+        line-height: 1.1; /* Tighter line height */
     }
     
     .faq-subtitle {
-        font-size: 0.9rem;
-        margin-bottom: 2rem;
+        font-size: 0.8rem; /* Reduced from 0.9rem */
+        margin-bottom: 1.5rem; /* Reduced margin */
     }
     
     .faq-question {
-        padding: 0.8rem;
-        gap: 0.8rem;
+        padding: 0.6rem; /* Reduced from 0.8rem */
+        gap: 0.6rem; /* Reduced gap */
     }
     
     .faq-text {
-        font-size: 0.95rem;
-        line-height: 1.4;
+        font-size: 0.85rem; /* Reduced from 0.95rem */
+        line-height: 1.3; /* Tighter line height */
     }
     
     .faq-item.active .faq-answer {
-        padding: 0.8rem;
+        padding: 0.6rem; /* Reduced from 0.8rem */
     }
     
     .faq-answer p {
-        font-size: 0.9rem;
-        line-height: 1.5;
+        font-size: 0.8rem; /* Reduced from 0.9rem */
+        line-height: 1.4; /* Tighter line height */
     }
     
     .faq-answer ul {
-        padding-left: 1.2rem;
+        padding-left: 1rem; /* Reduced from 1.2rem */
     }
     
     .faq-answer li {
-        font-size: 0.9rem;
+        font-size: 0.8rem; /* Reduced from 0.9rem */
     }
 }
 
 /* Extra small screens */
 @media (max-width: 360px) {
+    .container {
+        padding: 0.1rem 0.1rem 0.5rem 0.1rem; /* Minimal padding */
+        margin: 0;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem; /* Further reduced */
+        letter-spacing: 0.02em; /* Minimal letter spacing */
+        margin-bottom: 0.1rem;
+    }
+    
+    .countdown-value {
+        font-size: 2rem; /* Further reduced */
+    }
+    
+    .countdown-label {
+        font-size: 0.6rem; /* Further reduced */
+    }
+    
+    .countdown-unit {
+        padding: 0.4rem 0.3rem; /* Minimal padding */
+    }
+    
+    .book-accommodation-btn {
+        padding: 8px 16px !important; /* Minimal padding */
+        font-size: 0.8rem !important; /* Reduced font size */
+        max-width: 200px; /* Further reduced max width */
+    }
+    
     .faq-title {
-        font-size: 1.6rem;
-        letter-spacing: 0.1em;
+        font-size: 1.3rem; /* Further reduced from 1.6rem */
+        letter-spacing: 0.05em; /* Minimal letter spacing */
     }
     
     .faq-question {
-        padding: 0.6rem;
+        padding: 0.4rem; /* Minimal padding */
     }
     
     .faq-text {
-        font-size: 0.9rem;
+        font-size: 0.8rem; /* Further reduced */
     }
     
     .faq-answer p,
     .faq-answer li {
-        font-size: 0.85rem;
+        font-size: 0.75rem; /* Further reduced */
     }
 }

@@ -784,50 +784,50 @@ button:active {
 @media (max-width: 480px) {
   /* Enhanced mobile styles for very small screens */
   body {
-    padding: 0.25rem;
+    padding: 0.1rem; /* Reduced padding */
   }
 
   .container {
-    padding: 0.5rem 0.25rem;
+    padding: 0.25rem 0.1rem; /* Reduced padding */
     margin: 0;
   }
 
   .booking-header {
-    margin-bottom: 1.5rem;
-    padding: 0 0.25rem;
+    margin-bottom: 1rem; /* Reduced margin */
+    padding: 0 0.1rem; /* Reduced padding */
   }
 
   .booking-header h1 {
-    font-size: 1.8rem;
-    line-height: 1.1;
+    font-size: 1.5rem; /* Reduced from 1.8rem */
+    line-height: 1; /* Tighter line height */
   }
 
   .form-group label {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Reduced from 1rem */
   }
 
   .form-group input,
   .form-group select,
   .form-group textarea {
-    padding: 0.8rem;
-    font-size: 1rem;
-    min-height: 44px;
+    padding: 0.6rem; /* Reduced from 0.8rem */
+    font-size: 0.9rem; /* Reduced from 1rem */
+    min-height: 40px; /* Reduced from 44px */
   }
 
   .submit-btn {
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    min-height: 48px;
+    padding: 0.8rem 1.2rem; /* Reduced padding */
+    font-size: 0.9rem; /* Reduced from 1rem */
+    min-height: 44px; /* Reduced from 48px */
   }
 
   .modal-content {
-    width: 98%;
+    width: 96%; /* Reduced from 98% */
     margin: 2% auto;
-    padding: 1rem;
+    padding: 0.8rem; /* Reduced from 1rem */
   }
 
   .modal-header h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem; /* Reduced from 1.5rem */
   }
 
   .confirmation-item span:first-child {
