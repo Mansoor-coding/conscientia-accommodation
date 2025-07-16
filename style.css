@@ -47,7 +47,7 @@ body {
 
 /* ===== 2. FESTIVAL DESCRIPTION ===== */
 .festival-description {
-    text-align: left;
+    text-align: center;
     max-width: 75ch; /* Limit width for readability */
     margin: 0 auto 3rem auto;
     padding: 2rem;
@@ -60,7 +60,7 @@ body {
 }
 
 .festival-description p {
-    color: rgba(220, 220, 255, 0.85);
+    color: rgba(255, 255, 255, 0.95); /* Increased from 0.85 for better readability */
     line-height: 1.7;
     font-size: 1.25rem;
     font-family: 'Electrolize', sans-serif;
@@ -143,7 +143,7 @@ button {
     display: block;
     text-align: center;
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem; /* Increased from 1.5rem */
     background: linear-gradient(90deg, rgba(0, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(0, 255, 255, 0.9) 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -172,7 +172,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem 2rem; /* Increased padding from 1rem 1.5rem */
     background: linear-gradient(145deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 255, 255, 0.1) 100%);
     border: 2px solid rgba(0, 255, 255, 0.4);
     border-radius: 16px;
@@ -180,13 +180,13 @@ button {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
-    min-width: 120px;
+    min-width: 140px; /* Increased from 120px */
     transition: all 0.3s ease;
 }
 
 .countdown-value {
     font-family: 'Orbitron', monospace;
-    font-size: 4rem;
+    font-size: 5.5rem; /* Increased from 4rem */
     font-weight: 700;
     color: rgba(0, 255, 255, 0.9);
     text-shadow: 0 0 22px rgba(0, 255, 255, 0.7);
@@ -216,8 +216,8 @@ button {
 
 .countdown-label {
     font-family: 'Electrolize', sans-serif;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem; /* Increased from 1rem */
+    color: rgba(255, 255, 255, 0.9); /* Increased from 0.7 for better readability */
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-weight: 400;
@@ -253,7 +253,7 @@ button {
 }
 
 .location-details p {
-    color: rgba(220, 220, 255, 0.85);
+    color: rgba(255, 255, 255, 0.95); /* Increased from rgba(220, 220, 255, 0.85) for better readability */
     line-height: 1.6;
     margin-bottom: 0.8rem;
     font-family: 'Electrolize', sans-serif;
@@ -281,6 +281,213 @@ button {
     transform: scale(1.05);
     box-shadow: 0 0 25px rgba(0, 220, 255, 0.6);
 }
+
+/* ===== FAQ SECTION ===== */
+.faq-section {
+    width: 100%;
+    margin: 4rem 0 2rem 0;
+    padding: 3rem 2rem;
+    background: rgba(10, 25, 47, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 20px;
+    position: relative;
+}
+
+.faq-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.05) 50%, transparent 70%);
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.faq-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.5rem;
+    color: #00ffff;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.faq-subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9); /* Increased from 0.7 for better readability */
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.faq-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    background: rgba(0, 20, 40, 0.4);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.8), transparent);
+    transition: left 0.5s ease;
+}
+
+.faq-item.active::before {
+    left: 100%;
+}
+
+.faq-question {
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(0, 30, 60, 0.3);
+    transition: all 0.3s ease;
+    user-select: none;
+    position: relative;
+}
+
+.faq-question::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: rgba(0, 255, 255, 0.6);
+    transition: width 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+    width: 100%;
+}
+
+.faq-icon {
+    color: #00ffff;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    min-width: 20px;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(90deg);
+}
+
+.faq-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.05em;
+}
+
+.faq-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: rgba(0, 10, 20, 0.2);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease, max-height 0.3s ease;
+}
+
+.faq-answer p {
+    color: rgba(255, 255, 255, 0.95); /* High contrast text for readability */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-family: 'Electrolize', sans-serif;
+}
+
+.faq-answer strong {
+    color: #00ffff;
+    font-weight: 600;
+}
+
+.faq-item.active .faq-answer {
+    padding: 1.5rem;
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Improved focus states for accessibility */
+.faq-question:focus {
+    outline: 2px solid rgba(0, 255, 255, 0.8);
+    outline-offset: 2px;
+    background: rgba(0, 50, 100, 0.5);
+}
+
+.faq-question:focus-visible {
+    outline: 2px solid rgba(0, 255, 255, 0.8);
+    outline-offset: 2px;
+}
+
+/* Enhanced hover effects */
+.faq-item:hover .faq-icon {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+.faq-item:hover .faq-text {
+    color: #00ffff;
+}
+
+/* Loading animation for smooth appearance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.faq-item {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.faq-item:nth-child(1) { animation-delay: 0.1s; }
+.faq-item:nth-child(2) { animation-delay: 0.2s; }
+.faq-item:nth-child(3) { animation-delay: 0.3s; }
+.faq-item:nth-child(4) { animation-delay: 0.4s; }
+.faq-item:nth-child(5) { animation-delay: 0.5s; }
+.faq-item:nth-child(6) { animation-delay: 0.6s; }
+.faq-item:nth-child(7) { animation-delay: 0.7s; }
+.faq-item:nth-child(8) { animation-delay: 0.8s; }
+.faq-item:nth-child(9) { animation-delay: 0.9s; }
+.faq-item:nth-child(10) { animation-delay: 1.0s; }
+.faq-item:nth-child(11) { animation-delay: 1.1s; }
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
@@ -344,7 +551,7 @@ button {
     }
 
     .countdown-value {
-        font-size: 3.5rem; /* Larger for mobile */
+        font-size: 4.5rem; /* Increased from 3.5rem for mobile */
     }
     
     .countdown-label {
@@ -369,6 +576,27 @@ button {
 
     .location-details p {
         margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    .faq-section {
+        margin: 2rem 0 1rem 0;
+        padding: 2rem 1rem;
+    }
+    
+    .faq-title {
+        font-size: 2rem;
+    }
+    
+    .faq-question {
+        padding: 1rem;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 1rem;
+    }
+    
+    .faq-text {
         font-size: 1rem;
     }
 }
@@ -420,7 +648,7 @@ button {
     }
     
     .countdown-value {
-        font-size: 2.5rem; /* Better than 2.2rem */
+        font-size: 3.5rem; /* Increased from 2.5rem for very small screens */
     }
     
     .countdown-label {
@@ -441,5 +669,72 @@ button {
     .countdown-section {
         padding: 1.5rem 0.5rem !important;
         margin: 1.5rem 0 !important;
+    }
+}
+
+/* Enhanced mobile responsiveness for FAQ */
+@media (max-width: 480px) {
+    .faq-section {
+        margin: 1.5rem 0 0.5rem 0;
+        padding: 1.5rem 0.8rem;
+        border-radius: 15px;
+    }
+    
+    .faq-title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .faq-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+    
+    .faq-question {
+        padding: 0.8rem;
+        gap: 0.8rem;
+    }
+    
+    .faq-text {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0.8rem;
+    }
+    
+    .faq-answer p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .faq-answer ul {
+        padding-left: 1.2rem;
+    }
+    
+    .faq-answer li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+    .faq-title {
+        font-size: 1.6rem;
+        letter-spacing: 0.1em;
+    }
+    
+    .faq-question {
+        padding: 0.6rem;
+    }
+    
+    .faq-text {
+        font-size: 0.9rem;
+    }
+    
+    .faq-answer p,
+    .faq-answer li {
+        font-size: 0.85rem;
     }
 }

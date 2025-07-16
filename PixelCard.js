@@ -30,6 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
             
             modalOverlay.classList.add('visible');
 
+            // Force reload the map iframe if present
+            const modalMap = modalOverlay.querySelector('.map-container iframe');
+            if (modalMap) {
+                const src = modalMap.src;
+                modalMap.src = '';
+                setTimeout(() => { modalMap.src = src; }, 10);
+            }
+
             // Close modal functionality
             const closeModal = () => {
                 modalOverlay.classList.remove('visible');
