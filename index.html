@@ -3,7 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accommodation - Conscientia Tech Fest</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Accommodation - Conscientia 2025 | IIST Tech Fest Lodging</title>
+    <meta name="description" content="Book comfortable accommod        </section>
+    </div>
+
+    <!-- Sticky Book Now Button for Mobile -->
+    <button class="sticky-book-btn" onclick="window.location.href='booking.html'">
+        🚀 Book Now
+    </button>
+
+    <script src="script.js"></script>
+    <script src="countdown.js"></script>
+    <script src="variable-proximity-advanced.js"></script>
+    <script src="PixelCard.js"></script>
+    <script src="faq.js"></script>r Conscientia 2025, the premier astronomy and technology festival at IIST Trivandrum. Secure lodging for India's top space tech event.">
+    <meta name="keywords" content="Conscientia 2025, IIST accommodation, tech fest lodging, astronomy festival, space technology event, Trivandrum accommodation">
+    <meta name="author" content="Indian Institute of Space Science and Technology">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Accommodation - Conscientia 2025 | IIST Tech Fest">
+    <meta property="og:description" content="Book your stay for India's premier astronomy and technology festival at IIST Trivandrum.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://conscientia-accommodation.vercel.app">
+    <meta property="og:image" content="https://conscientia-accommodation.vercel.app/assets/conscientia-og.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Accommodation - Conscientia 2025">
+    <meta name="twitter:description" content="Book your stay for India's premier astronomy and technology festival.">
+    <meta name="twitter:image" content="https://conscientia-accommodation.vercel.app/assets/conscientia-twitter.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>🚀</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>🚀</text></svg>">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="variable-proximity.css">
     <link rel="stylesheet" href="PixelCard.css">
@@ -23,6 +60,48 @@
         <div class="festival-description">
             <p>Conscientia, the annual Astronomy and Technology festival of the Indian Institute of Space Science and Technology (IIST) in Thiruvananthapuram, has been a beacon for science enthusiasts since its inception. Over the years, it has hosted numerous events and workshops, attracting participants from various parts of the country. The festival has featured esteemed speakers, including the late Dr. A.P.J. Abdul Kalam, and has showcased advancements in space technology and engineering through technical expos and hands-on workshops. The vibrant atmosphere and the convergence of ideas from diverse scientific spheres make Conscientia a unique platform for budding scientists and engineers.</p>
         </div>
+
+        <!-- 2.5 ACCOMMODATION GALLERY -->
+        <section class="accommodation-gallery">
+            <h2 class="gallery-title">🏠 Accommodation Preview</h2>
+            <p class="gallery-subtitle">Experience comfortable and modern lodging facilities</p>
+            
+            <div class="gallery-container">
+                <div class="gallery-item active">
+                    <div class="gallery-image" style="background: linear-gradient(45deg, rgba(0,255,255,0.3), rgba(255,0,255,0.2)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%22%23123456%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22white%22 font-size=%2220%22 text-anchor=%22middle%22 dy=%22.3em%22>Modern Dormitories</text></svg>'); background-size: cover; background-position: center;"></div>
+                    <div class="gallery-caption">
+                        <h3>🛏️ Comfortable Dormitories</h3>
+                        <p>Clean, spacious rooms with modern amenities</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background: linear-gradient(45deg, rgba(0,255,255,0.3), rgba(255,0,255,0.2)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%22%23234567%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22white%22 font-size=%2220%22 text-anchor=%22middle%22 dy=%22.3em%22>Common Areas</text></svg>'); background-size: cover; background-position: center;"></div>
+                    <div class="gallery-caption">
+                        <h3>🏛️ Common Areas</h3>
+                        <p>Study lounges and recreational spaces</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image" style="background: linear-gradient(45deg, rgba(0,255,255,0.3), rgba(255,0,255,0.2)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect width=%22400%22 height=%22300%22 fill=%22%23345678%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22white%22 font-size=%2220%22 text-anchor=%22middle%22 dy=%22.3em%22>Dining Facilities</text></svg>'); background-size: cover; background-position: center;"></div>
+                    <div class="gallery-caption">
+                        <h3>🍽️ Dining Facilities</h3>
+                        <p>Nutritious meals and refreshment areas</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-controls">
+                <button class="gallery-btn prev" onclick="changeGallerySlide(-1)">‹</button>
+                <div class="gallery-dots">
+                    <span class="dot active" onclick="currentGallerySlide(1)"></span>
+                    <span class="dot" onclick="currentGallerySlide(2)"></span>
+                    <span class="dot" onclick="currentGallerySlide(3)"></span>
+                </div>
+                <button class="gallery-btn next" onclick="changeGallerySlide(1)">›</button>
+            </div>
+        </section>
 
         <!-- 3. PIXEL CARDS SECTION -->
         <section class="pixel-card-grid">
@@ -292,8 +371,9 @@
 
     <script src="script.js"></script>
     <script src="countdown.js"></script>
-    <script src="variable-proximity-advanced.js"></script>
+    <script src="variable-proximity.js"></script>
     <script src="PixelCard.js"></script>
     <script src="faq.js"></script>
+    <script src="gallery.js"></script>
 </body>
 </html>
