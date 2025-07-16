@@ -531,6 +531,7 @@ button {
         display: flex;
         align-items: center;
         justify-content: center;
+        white-space: nowrap; /* Prevent text wrapping to keep on single line */
     }
     
     .book-accommodation-section::before {
@@ -637,6 +638,7 @@ button {
         width: 100%;
         max-width: 250px; /* Reduced max width */
         margin: 0 auto;
+        white-space: nowrap; /* Prevent text wrapping to keep on single line */
     }
     
     .countdown-container {
@@ -749,6 +751,7 @@ button {
         padding: 8px 16px !important; /* Minimal padding */
         font-size: 0.8rem !important; /* Reduced font size */
         max-width: 200px; /* Further reduced max width */
+        white-space: nowrap; /* Prevent text wrapping to keep on single line */
     }
     
     .faq-title {
