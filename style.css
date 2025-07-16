@@ -502,7 +502,7 @@ button {
     }
     
     .header h1 {
-        font-size: 2.3rem; /* Reduced from 2.6rem */
+        font-size: 2.6rem; /* Increased from 2.3rem for better visibility */
         font-weight: 700; /* Added bold weight */
         line-height: 1.1; /* Tighter line height */
         letter-spacing: 0.1em; /* Reduced letter spacing */
@@ -614,7 +614,7 @@ button {
     }
     
     .header h1 {
-        font-size: 1.9rem; /* Reduced from 2.1rem */
+        font-size: 2.1rem; /* Increased from 1.9rem for better visibility */
         font-weight: 700; /* Added bold weight */
         margin-bottom: 0.2rem; /* Minimal margin */
         line-height: 1;
